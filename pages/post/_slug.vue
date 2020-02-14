@@ -78,6 +78,11 @@ export default {
           hid: 'description',
           name: 'description',
           content: post.summary
+        },
+        {
+          hid: 'keywords',
+          name: 'keywords',
+          content: post.keywords
         }
       ]
     }

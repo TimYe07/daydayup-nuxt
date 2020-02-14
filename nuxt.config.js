@@ -11,7 +11,7 @@ export default {
       {
         hid: 'keywords',
         name: 'keywords',
-        content: '.net core,c#,vuejs,react'
+        content: '.net core,c#,vuejs,react,代码搬运工,面向谷歌编程'
       },
       {
         hid: 'description',
