@@ -1,8 +1,7 @@
 import axios from 'axios'
 
 const service = axios.create({
-  baseURL: process.browser ? 'https://www.codeporter.dev' : 'http://daydayup_api',
-  timeout: 10000
+  baseURL: process.browser ? 'https://www.codeporter.dev' : 'http://daydayup_api'
 })
 
 service.interceptors.request.use(
