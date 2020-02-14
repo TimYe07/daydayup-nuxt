@@ -1,0 +1,381 @@
+@charset "utf-8";
+/* http://meyerweb.com/eric/tools/css/reset/
+   v4.0 | 20180602
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+main, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing:border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section {
+  display: block;
+}
+/* HTML5 hidden-attribute fix for newer browsers */
+*[hidden] {
+  display: none;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+input[type='button'] {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+input[type='number'] {
+  padding-right: 0;
+}
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+  color:    #999;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color:    #999;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color:    #999;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color:    #999;
+}
+
+
+
+/* ======================  main style  ====================  */
+body {
+  max-width: 1920px;
+  color: #333;
+  font-size: 14px;
+  margin: 0 auto;
+}
+.row {
+  display: block;
+  width: 100%;
+}
+.w {
+  width: 1200px;
+  margin: 0 auto;
+}
+.blue {
+  color: @blue;
+}
+.red {
+  color: @red;
+}
+.green {
+  color: @green;
+}
+.blue-bg {
+  color: #fff;
+  background-color: @blue;
+}
+.red-bg {
+  color: #fff;
+  background-color: @red;
+}
+.f12 {
+  font-size: 12px;
+}
+.f14 {
+  font-size: 14px;
+}
+.f16 {
+  font-size: 16px;
+}
+
+b {
+  font-weight: bold;
+}
+.clearfix:after {
+  content: ".";
+  display: block;
+  height:0;
+  clear:both;
+  visibility: hidden;
+}
+.clearfix {
+  *zoom:1;
+}
+.pa { position: absolute }
+.pf { position: fixed }
+.ps { position: static }
+.pr { position: relative }
+.fl { float: left }
+.fr { float: right }
+.al { text-align: left }
+.ac { text-align: center }
+.ar { text-align: right }
+.hide { display: none }
+.reset-input {
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+}
+.ellipsis {
+  width:100%;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+
+/* ===================  native scroll  ==================  */
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+::-webkit-scrollbar
+{
+  width: 8px;
+  background-color: #fff;
+}
+
+/*定义滚动条轨道 内阴影+圆角*/
+::-webkit-scrollbar-track
+{
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  border-radius: 0;
+  background-color: lightgray;
+}
+
+/*定义滑块 内阴影+圆角*/
+::-webkit-scrollbar-thumb
+{
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+  background-color: #999;
+}
+/*定义最上方和最下方的按钮*/
+::-webkit-scrollbar-button{
+  //background-color: #000;
+  //border:1px solid yellow;
+}
+
+/* ===================  vue-quill-editor  ==================  */
+.ql-editor {
+  min-height: 400px;
+  line-height: 2 !important;
+}
+.ql-snow .ql-picker {
+  line-height: 24px;
+}
+.ql-snow .ql-editor code,
+.ql-snow .ql-editor pre {
+  font-size: 1em !important;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+}
+// 兼容wangEditor, 后续会更新前端富文本
+table {
+  border: 1px solid #eaeaea;
+  td,th {
+    border-top: 1px solid #eaeaea;
+    border-left: 1px solid #eaeaea;
+    padding: 3px 5px;
+    line-height: 1.5;
+    white-space: normal;
+  }
+}
+/* ======================  element ui  ====================  */
+/*
+ *   table
+*/
+.el-table thead th {
+  background: #eaeaea;
+  color: #333;
+}
+.el-table--border td, .el-table--border th, .el-table__body-wrapper .el-table--border.is-scrolling-left~.el-table__fixed {
+  border-right: 1px solid #ccc !important;
+}
+.el-table td, .el-table th.is-leaf {
+  border-bottom: 1px solid #ccc !important;
+}
+.el-table--border, .el-table--group {
+  border: 1px solid #ccc !important;
+}
+.tab-opera a {
+  margin-right: 10px;
+}
+
+/*
+ *   pagination
+*/
+.el-pagination {
+  text-align: right;
+  padding: 20px 0 30px !important;
+}
+
+/*
+ *   pagination
+*/
+.el-breadcrumb {
+  padding-bottom: 15px;
+  border-bottom: 1px dashed #ccc;
+  margin-bottom: 10px;
+}
+
+/*
+ *   input
+*/
+.el-pagination {
+  text-align: right;
+  padding: 20px 0 30px !important;
+}
+input[type='number'] {
+  padding-right: 0;
+}
+
+/*
+ *   dialog/messageBox
+*/
+//.el-dialog ,
+.el-message-box {
+  border: none !important;
+  border-radius: 3px !important;
+  box-shadow: 0 0 5px 5px #ccc !important;
+}
+.el-dialog .el-dialog__header,
+.el-message-box .el-message-box__header {
+  height: 55px;
+  padding: 15px 20px 15px;
+  background-color: #efc14e;
+}
+.el-dialog .el-dialog__title,
+.el-message-box .el-message-box__title {
+  color: #fff;
+  font-size: 20px;
+  font-weight: normal;
+}
+.el-dialog .el-dialog__headerbtn,
+.el-message-box .el-message-box__headerbtn {
+  width: 20px;
+  height: 20px;
+  top: 5px;
+  right: 5px;
+  background: #fff;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 22px;
+}
+.el-dialog .el-dialog__header .el-dialog__headerbtn .el-dialog__close {
+  color: #efc14e;
+}
+.el-dialog .el-dialog__header .el-dialog__headerbtn:hover {
+  background-color: #f5f5f5 ;
+}
+.el-message-box .el-message-box__content {
+  padding: 25px 15px;
+}
+.el-dialog__footer,
+.el-message-box__btns{
+  padding-top: 15px;
+  border-top: 1px solid #DFDFDF;
+}
+.el-dialog__footer .el-button--default,
+.el-dialog__footer .el-button--primary,
+.el-dialog__footer .el-button--danger {
+  min-width: 80px;
+  padding: 8px 10px;
+  border-radius: 3px;
+  background-color: #e4e4e4;
+  border: solid 1px #999999;
+}
+.el-message-box__btns .el-button--default,
+.el-message-box__btns .el-button--primary,
+.el-message-box__btns .el-button--danger {
+  min-width: 70px;
+  padding: 8px 16px;
+  border-radius: 3px;
+  background-color: #e4e4e4;
+  border: solid 1px #999999;
+}
+.el-dialog__footer .el-button--primary,
+.el-message-box__btns .el-button--primary {
+  background-color: #F5FEF9;
+  border: solid 1px #28CE6A;
+}
+.el-dialog__footer .el-button--danger,
+.el-message-box__btns .el-button--danger {
+  background-color: #fad7d2;
+  border: solid 1px #f33617;
+}
+.el-dialog__footer .el-button--default:hover,
+.el-dialog__footer .el-button--default:focus,
+.el-message-box__btns .el-button--default:hover,
+.el-message-box__btns .el-button--default:focus {
+  background-color: #999;
+}
+.el-dialog__footer .el-button--primary:hover,
+.el-dialog__footer .el-button--primary:focus,
+.el-message-box__btns .el-button--primary:hover,
+.el-message-box__btns .el-button--primary:focus {
+  background-color: #28ce6a;
+}
+.el-dialog__footer .el-button--danger:hover,
+.el-dialog__footer .el-button--danger:focus,
+.el-message-box__btns .el-button--danger:hover,
+.el-message-box__btns .el-button--danger:focus {
+  background-color: #f33617;
+}
+.el-dialog__footer .el-button span,
+.el-message-box__btns .el-button span {
+  font-size: 16px;
+  letter-spacing: 0;
+}
+.el-dialog__footer .el-button--default span,
+.el-message-box__btns .el-button--default span {
+  color: #333;
+}
+.el-dialog__footer .el-button--primary span,
+.el-message-box__btns .el-button--primary span {
+  color: #28CE6A;
+}
+.el-dialog__footer .el-button--danger span,
+.el-message-box__btns .el-button--danger span {
+  color: #f33617;
+}
+.el-dialog__footer .el-button--default:hover span,
+.el-dialog__footer .el-button--primary:hover span,
+.el-dialog__footer .el-button--danger:hover span,
+.el-dialog__footer .el-button--default:focus span,
+.el-dialog__footer .el-button--primary:focus span,
+.el-dialog__footer .el-button--danger:focus span,
+
+.el-message-box__btns .el-button--default:hover span,
+.el-message-box__btns .el-button--primary:hover span,
+.el-message-box__btns .el-button--danger:hover span,
+.el-message-box__btns .el-button--default:focus span,
+.el-message-box__btns .el-button--primary:focus span,
+.el-message-box__btns .el-button--danger:focus span {
+  color: #fff;
+}
