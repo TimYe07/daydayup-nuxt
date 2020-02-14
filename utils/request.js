@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const service = axios.create({
-  baseURL: process.browser ? 'https://www.codeporter.dev' : 'http://localhost:5000',
+  baseURL: process.browser ? 'https://www.codeporter.dev' : 'http://daydayup_api',
   timeout: 10000
 })
 
